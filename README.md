@@ -1,2 +1,2 @@
 # kube-pttg-feedback-export
-kubernetes config for pttg-feedback-export
+Kubernetes configuration for pttg-feedback-export
