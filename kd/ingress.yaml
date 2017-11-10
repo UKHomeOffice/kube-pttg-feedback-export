@@ -6,14 +6,14 @@ metadata:
     kubernetes.io/tls-acme: "true"
     ingress.kubernetes.io/secure-backends: "true"
     ingress.kubernetes.io/whitelist-source-range: "{{.WHITELIST}}"
-  name: pttg-ip-feedback
+  name: pttg-feedback-export
 spec:
   rules:
   - host: ip.feedback.{{.DNS_PREFIX}}pttg.homeoffice.gov.uk
     http:
       paths:
       - backend:
-          serviceName: pttg-ip-feedback
+          serviceName: pttg-feedback-export
           servicePort: 443
         path: /
   tls:
