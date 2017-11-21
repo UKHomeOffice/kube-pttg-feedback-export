@@ -230,7 +230,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
           - mountPath: /data
-            name: secrets
+            name: javapki
             readOnly: true
       volumes:
       - name: secrets
