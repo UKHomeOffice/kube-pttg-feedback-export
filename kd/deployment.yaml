@@ -133,38 +133,8 @@ spec:
             value: '8080'
           - name: ENDPOINTS_INFO_ENABLED
             value: 'false'
-          - name: SPRING_PROFILES_ACTIVE
-            value: 'postgres'
-          - name: PTTG_DB_HOSTNAME
-            valueFrom:
-              secretKeyRef:
-                name: pttg-rds-access
-                key: endpoint
-          - name: PTTG_DB_PORT
-            valueFrom:
-              secretKeyRef:
-                name: pttg-rds-access
-                key: port
-          - name: PTTG_DB_NAME
-            valueFrom:
-              secretKeyRef:
-                name: pttg-rds-access
-                key: database
-          - name: IP_SCHEMA_NAME
-            valueFrom:
-              secretKeyRef:
-                name: db-secrets
-                key: schema_name
-          - name: IP_DB_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: db-secrets
-                key: application_username
-          - name: IP_DB_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: db-secrets
-                key: application_password
+          - name: BASE_FEEDBACK_URL
+            value: "https://pttg-feedback.pt-i-{{.ENVIRONMENT}}.svc.cluster.local"
         resources:
           limits:
             cpu: 1000m
