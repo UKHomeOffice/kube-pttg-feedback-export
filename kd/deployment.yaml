@@ -189,6 +189,8 @@ spec:
         env:
           - name: JAVA_OPTS
             value: "-Xms150m -Xmx250m -Djavax.net.ssl.trustStore=/data/truststore.jks"
+          - name: JDK_TRUST_FILE
+            value: '/data/truststore.jks'
           - name: SERVER_PORT
             value: '8080'
           - name: ENDPOINTS_INFO_ENABLED
