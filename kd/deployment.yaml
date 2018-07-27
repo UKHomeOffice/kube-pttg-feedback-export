@@ -142,8 +142,8 @@ spec:
             - name: FEEDBACK_SERVICE_AUTH
               valueFrom:
                 secretKeyRef:
-                  name: pttg-feedback-export-service-secrets
-                  key: pttg_ip_fm_audit_ui
+                  name: pttg-feedback-service-secrets
+                  key: pttg_feedback_export
           resources:
             limits:
               cpu: 1600m
