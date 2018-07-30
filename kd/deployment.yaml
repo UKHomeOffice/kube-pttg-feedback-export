@@ -120,7 +120,7 @@ spec:
             - name: https
               containerPort: 10443
         - name: pttg-feedback-export
-          image: quay.io/ukhomeofficedigital/pttg-feedback:{{.VERSION}}
+          image: quay.io/ukhomeofficedigital/pttg-feedback-export:{{.VERSION}}
           imagePullPolicy: Always
           securityContext:
             runAsNonRoot: true
