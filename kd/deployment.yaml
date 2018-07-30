@@ -137,8 +137,8 @@ spec:
               value: '8080'
             - name: ENDPOINTS_INFO_ENABLED
               value: 'false'
-            - name: PTTG_FEEDBACK_URL
-              value: 'https://pttg-ip-feedback.pttg-ip-{{.ENVIRONMENT}}.svc.cluster.local'
+            - name: BASE_FEEDBACK_URL
+              value: 'https://pttg-feedback.pttg-ip-{{.ENVIRONMENT}}.svc.cluster.local'
             - name: FEEDBACK_SERVICE_AUTH
               valueFrom:
                 secretKeyRef:
